@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sistem Pembaruan Data BIP - Desa Malaka</title>
+  <title>Sistem Pembaruan Data BIP - Desa Babussalam</title>
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -69,7 +69,7 @@
         <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center text-2xl mx-auto shadow-inner">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
-        <h1 class="text-xl font-bold tracking-tight">SI-BIP DESA MALAKA</h1>
+        <h1 class="text-xl font-bold tracking-tight">SI-BIP DESA Babussalam</h1>
         <p class="text-xs text-blue-200">Sistem Pembaruan Buku Induk Kependudukan Terpusat</p>
       </div>
 
@@ -121,7 +121,7 @@
           </div>
           <div>
             <h1 class="font-bold text-white text-base tracking-tight leading-tight">SI-BIP DESA</h1>
-            <p class="text-xs text-slate-400">Desa Malaka • Terpusat</p>
+            <p class="text-xs text-slate-400">Desa Babussalam • Terpusat</p>
           </div>
         </div>
 
@@ -260,7 +260,7 @@
           <div class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 rounded-2xl p-6 text-white shadow-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div class="space-y-1.5 max-w-2xl">
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-blue-100 text-xs font-medium backdrop-blur-sm">
-                <i class="fa-solid fa-database"></i> Database Terpusat Desa Malaka • Sinkronisasi Multi-Admin
+                <i class="fa-solid fa-database"></i> Database Terpusat Desa Babussalam • Sinkronisasi Multi-Admin
               </div>
               <h3 class="text-xl md:text-2xl font-bold">Pantau & Kelola 5 Dusun dalam Satu Layar</h3>
               <p class="text-sm text-blue-100 leading-relaxed">
@@ -1156,7 +1156,7 @@
           </div>
           <div class="sm:col-span-2">
             <label class="block font-bold text-slate-700 mb-1">Alamat Lengkap *</label>
-            <input type="text" id="kf-alamat" required placeholder="Contoh: DUSUN KLUI, DESA MALAKA" class="w-full px-3 py-2 border border-slate-300 rounded-xl uppercase" />
+            <input type="text" id="kf-alamat" required placeholder="Contoh: DUSUN KLUI, DESA Babussalam" class="w-full px-3 py-2 border border-slate-300 rounded-xl uppercase" />
           </div>
           <div>
             <label class="block font-bold text-slate-700 mb-1">Kode Pos</label>
@@ -1346,12 +1346,12 @@
     let auth = null;
     let firebaseUser = null;
     let realtimeUnsubscribers = [];
-    const appId = 'bip-desa-malaka-default';
+    const appId = 'bip-desa-Babussalam-default';
     const firebaseConfig = {
       apiKey: 'AIzaSyDPgsLiD-H32ECnQmrCmGq00fRfvda7DV0',
-      authDomain: 'si-bip-desa-malaka.firebaseapp.com',
-      projectId: 'si-bip-desa-malaka',
-      storageBucket: 'si-bip-desa-malaka.firebasestorage.app',
+      authDomain: 'si-bip-desa-Babussalam.firebaseapp.com',
+      projectId: 'si-bip-desa-Babussalam',
+      storageBucket: 'si-bip-desa-Babussalam.firebasestorage.app',
       messagingSenderId: '432974800466',
       appId: '1:432974800466:web:5a3ea789067b755473e18b',
       measurementId: 'G-XZ0Z0P19DY'
@@ -2695,7 +2695,7 @@
       document.getElementById('kf-dusun').value = targetDusun;
       document.getElementById('kf-rtrw').value = '001/000';
       document.getElementById('kf-kodepos').value = '83352';
-      document.getElementById('kf-alamat').value = `DUSUN ${targetDusun.toUpperCase()}, DESA MALAKA`;
+      document.getElementById('kf-alamat').value = `DUSUN ${targetDusun.toUpperCase()}, DESA Babussalam`;
       document.getElementById('kf-initial-member-section').classList.remove('hidden');
       document.getElementById('kf-head-nik').required = true;
       document.getElementById('modal-kk-form').classList.remove('hidden');
@@ -2907,7 +2907,7 @@
             sheetName: entry.dusun.toUpperCase(),
             noKK: entry.noKK,
             kepalaKeluarga: entry.member.nama,
-            alamat: `DUSUN ${entry.dusun.toUpperCase()}, DESA MALAKA`,
+            alamat: `DUSUN ${entry.dusun.toUpperCase()}, DESA Babussalam`,
             rtRw: '001/000',
             dusun: entry.dusun,
             kodePos: '83352',
@@ -3248,7 +3248,7 @@
       }
 
       const buffer = await workbook.xlsx.writeBuffer();
-      triggerDownload(buffer, `BIP_TERBARU_DESA_MALAKA_LENGKAP.xlsx`);
+      triggerDownload(buffer, `BIP_TERBARU_DESA_Babussalam_LENGKAP.xlsx`);
       await writeAuditLog('Semua Dusun', '-', '-', 'Ekspor Seluruh Dusun', 'Ekspor Data', 'FILE EXCEL', '-', `${exportedSheets} worksheet dusun`);
       showToast('Berhasil mengunduh BIP seluruh dusun!', 'success');
     };
@@ -3277,7 +3277,7 @@
 
         ws.mergeCells(currentRow, 1, currentRow, 15);
         const subTitleCell = ws.getCell(currentRow, 1);
-        subTitleCell.value = `DESA MALAKA • KECAMATAN PEMENANG • KABUPATEN LOMBOK UTARA • DUSUN ${dusunName.toUpperCase()}`;
+        subTitleCell.value = `DESA Babussalam • KECAMATAN PEMENANG • KABUPATEN LOMBOK UTARA • DUSUN ${dusunName.toUpperCase()}`;
         subTitleCell.font = { name: 'Arial', size: 9, bold: true };
         subTitleCell.alignment = { horizontal: 'center' };
         currentRow += 2;
@@ -3286,7 +3286,7 @@
         ws.getCell(currentRow, 3).value = `: ${kk.noKK}`;
         ws.getCell(currentRow, 3).font = { bold: true };
         ws.getCell(currentRow, 11).value = 'Desa/Kelurahan';
-        ws.getCell(currentRow, 13).value = ': MALAKA';
+        ws.getCell(currentRow, 13).value = ': Babussalam';
         currentRow++;
 
         ws.getCell(currentRow, 1).value = 'Nama Kepala Keluarga';
@@ -3350,9 +3350,9 @@
 
         currentRow++;
         ws.getCell(currentRow, 2).value = 'Mengetahui,';
-        ws.getCell(currentRow, 12).value = `Malaka, ${new Date().toLocaleDateString('id-ID')}`;
+        ws.getCell(currentRow, 12).value = `Babussalam, ${new Date().toLocaleDateString('id-ID')}`;
         currentRow++;
-        ws.getCell(currentRow, 2).value = 'Kepala Desa Malaka';
+        ws.getCell(currentRow, 2).value = 'Kepala Desa Babussalam';
         ws.getCell(currentRow, 12).value = `Kepala Dusun ${dusunName}`;
         currentRow += 4;
         ws.getCell(currentRow, 2).value = '( ........................................ )';
@@ -3390,7 +3390,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `BACKUP_DB_BIP_MALAKA_${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `BACKUP_DB_BIP_Babussalam_${new Date().toISOString().slice(0, 10)}.json`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
