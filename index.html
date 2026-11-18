@@ -2695,7 +2695,7 @@
       document.getElementById('kf-dusun').value = targetDusun;
       document.getElementById('kf-rtrw').value = '001/000';
       document.getElementById('kf-kodepos').value = '83352';
-      document.getElementById('kf-alamat').value = `DUSUN ${targetDusun.toUpperCase()}, DESA Babussalam`;
+      document.getElementById('kf-alamat').value = `DUSUN ${targetDusun.toUpperCase()}, DESA MALAKA`;
       document.getElementById('kf-initial-member-section').classList.remove('hidden');
       document.getElementById('kf-head-nik').required = true;
       document.getElementById('modal-kk-form').classList.remove('hidden');
@@ -2907,7 +2907,7 @@
             sheetName: entry.dusun.toUpperCase(),
             noKK: entry.noKK,
             kepalaKeluarga: entry.member.nama,
-            alamat: `DUSUN ${entry.dusun.toUpperCase()}, DESA Babussalam`,
+            alamat: `DUSUN ${entry.dusun.toUpperCase()}, DESA MALAKA`,
             rtRw: '001/000',
             dusun: entry.dusun,
             kodePos: '83352',
@@ -3277,7 +3277,7 @@
 
         ws.mergeCells(currentRow, 1, currentRow, 15);
         const subTitleCell = ws.getCell(currentRow, 1);
-        subTitleCell.value = `DESA Babussalam • KECAMATAN PEMENANG • KABUPATEN LOMBOK UTARA • DUSUN ${dusunName.toUpperCase()}`;
+        subTitleCell.value = `DESA MALAKA • KECAMATAN PEMENANG • KABUPATEN LOMBOK UTARA • DUSUN ${dusunName.toUpperCase()}`;
         subTitleCell.font = { name: 'Arial', size: 9, bold: true };
         subTitleCell.alignment = { horizontal: 'center' };
         currentRow += 2;
